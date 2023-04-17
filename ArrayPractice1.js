@@ -43,6 +43,6 @@ let newarray2 = array.filter((array) => {
 
 //console.log(newarray2);
 
-newarray2.push({ name: "miten", city: "Surat" });
+newarray2.splice(1, 0, { name: "miten", city: "Surat" });
 
 console.log(newarray2);
