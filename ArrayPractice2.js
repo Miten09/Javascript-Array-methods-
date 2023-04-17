@@ -50,6 +50,15 @@ console.log(newArray1);
 
 //problem statement 2
 
+let employ = 0;
+
+for (let i = 0; i < employee.length; i++) {
+  if (employee[i].address.state === "Rajasthan") {
+    employ++;
+  }
+}
+console.log(employ);
+
 //problem statement 3
 
 let newArray3 = employee.filter((value) => {
@@ -59,6 +68,15 @@ console.log(newArray3);
 
 // problem statement 4
 
+function findAge(employee, names) {
+  for (i = 0; i < employee.length; i++) {
+    if (employee[i].name == names) {
+      return employee[i].age;
+    }
+  }
+}
+console.log(findAge(employee, "nikhil"));
+
 //problem statement 5
 
 let newArray5 = employee.filter((value) => {
@@ -67,7 +85,7 @@ let newArray5 = employee.filter((value) => {
 
 //console.log(newArray5);
 
-newArray5.splice(3,0,{
+newArray5.splice(3, 0, {
   name: "manoj",
   address: {
     city: "surat",
