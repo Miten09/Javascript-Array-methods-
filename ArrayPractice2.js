@@ -75,23 +75,17 @@ function findAge(employee, names) {
     }
   }
 }
-console.log(findAge(employee, "nikhil"));
+console.log(findAge(employee, "nikhil1"));
 
 //problem statement 5
 
-let newArray5 = employee.filter((value) => {
-  return value.name !== "manoj";
-});
-
-//console.log(newArray5);
-
-newArray5.splice(3, 0, {
-  name: "manoj",
-  address: {
-    city: "surat",
-    state: "Gujarat",
-  },
-  age: 20,
+const newArray5 = employee.map((value) => {
+  if (value.name == "manoj") {
+    value.address.city = "ahmedabad";
+    return value;
+  } else {
+    return value;
+  }
 });
 
 console.log(newArray5);
