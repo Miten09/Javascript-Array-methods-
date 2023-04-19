@@ -148,4 +148,167 @@ console.log(leapyear(2004));
 
 //problem statement 12
 
+let a = 10;
+let b = 2;
+
+a = a + b; //12 ,a=12
+b = a - b; //10, b=10
+a = a - b; //2, a=2
+//console.log(a, b);
+
+//problem statement 13
+
+let num = 30;
+
+if (num % 3 == 0) {
+  //console.log("FIZZ");
+}
+if (num % 5 == 0) {
+  //console.log("BUZZ");
+}
+if (num % 3 == 0 && num % 5 == 0) {
+  // console.log("FIZZ BUZZ");
+}
+
+//problem statement 14
+
+function totalLength(value) {
+  let str = 0;
+  for (i = 0; i < value.length; i++) {
+    str++;
+  }
+  return str;
+}
+//console.log(totalLength("miten"));
+
+//problem statement 15
+
+const UPPER1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LOWER1 = "abcdefghijklmnopqrstuvwxyz";
+const latest = [];
+
+function upper(str) {
+  if (UPPER1.indexOf(str[0] !== -1)) {
+    latest.push(str[0].toUpperCase());
+  }
+  return str[0];
+}
+//console.log(upper("miten"));
+
+//problem statement 16
+
+const characters = [
+  {
+    name: "tarak mehta",
+    height: "172",
+    mass: "77",
+    eye_color: "brown",
+    gender: "male",
+  },
+  {
+    name: "Jethalal",
+    height: "145",
+    mass: "136",
+    eye_color: "black",
+    gender: "male",
+  },
+  {
+    name: "Anjali",
+    height: "150",
+    mass: "49",
+    eye_color: "grey",
+    gender: "female",
+  },
+  {
+    name: "Krishnan Iyer",
+    height: "168",
+    mass: "4",
+    eye_color: "black",
+    gender: "male",
+  },
+];
+
+// Task - 1 -> Get an array of names
+
+let onlyNames = characters.map((char) => {
+  let nameOnly = char.name;
+  return nameOnly;
+});
+
+//console.log(onlyNames);
+
+// Task - 2 -> Get an array of objects with just name & height properties
+
+let NameHeight = characters.map((char) => {
+  let nameOnly = char.name;
+  let HeightOnly = char.height;
+
+  return { nameOnly, HeightOnly };
+});
+
+//console.log(NameHeight);
+
+// Task - 3 -> Get an Total Height of all characters
+
+let TotalHeight = characters.reduce((a, b) => {
+  return { height: Number(a.height) + Number(b.height) };
+});
+//console.log(TotalHeight);
+
+// Task - 4 -> Get an Characters with mass Greater than Zero
+
+let Onlymass = characters.filter((char) => {
+  return char.mass > 100;
+});
+
+//console.log(Onlymass);
+
+// Task - 5 -> Get All Characters
+
+let Onlymale = characters.filter((char) => {
+  if (char.gender !== "female") {
+    return char;
+  }
+});
+
+//console.log(Onlymale);
+
+//Task - 6 -> sort by gender
+//Task - 7 -> sort by Name
+
+//Task - 8 => Does every character have mass more than 40?
+
+const Allchar = characters.some((char) => {
+  return char.mass > 40;
+});
+//console.log(Allchar);
+
+//Task - 9 => Does every character have blue eyes?
+
+const Allchar1 = characters.some((char) => {
+  return char.eye_color == "blue";
+});
+//console.log(Allchar1);
+
+//Problem statement 17
+
+function ArraySorted(items, n) {
+  for (i = 0; i < items.length; i++) {
+    items[i] = items[n];
+    return items[i];
+  }
+}
+//console.log(ArraySorted([23, 46, 35, 41, 50], 4));
+
+//problem statement 18
+
+// Function to shuffle the array content
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+
+console.log(shuffleArray(arr));
+
 
