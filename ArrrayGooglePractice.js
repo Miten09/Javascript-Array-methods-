@@ -311,4 +311,23 @@ var arr = [1, 2, 3, 4, 5, 6, 7];
 
 console.log(shuffleArray(arr));
 
+//problem statement 19
+
+function sumArray(arr1, arr2) {
+  let newArray = [];
+  for (i = 0; i < arr1.length; i++) {
+    newArray.push(arr1[i] + arr2[i]);
+  }
+  return newArray;
+}
+//console.log(sumArray([2, 0, 5, 3, 10], [3, 5, 6, 7, 8, 13]));
+
+//problem statement 20
+const arr123 = [1, 2, 1, 3, 4, 3, 5];
+
+const toFindDuplicates = (arr123) =>       
+  arr123.filter((item, index) => arr123.indexOf(item) !== index);
+const duplicateElements = toFindDuplicates(arr123);
+console.log(duplicateElements);
+
 
