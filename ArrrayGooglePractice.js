@@ -330,4 +330,71 @@ const toFindDuplicates = (arr123) =>
 const duplicateElements = toFindDuplicates(arr123);
 console.log(duplicateElements);
 
+//problem statement 21
+
+let numbers1 = [1, 2, 3];
+let numbers2 = [100, 2, 1, 10];
+let c = [...numbers1, ...numbers2].sort();
+// console.log(c) //  c = [34,35,45,48,49,48,55]
+
+let finalArray = c.filter((item, index) => {
+  //console.log(item)
+  //console.log(index)
+  //[34,35,45,48,49,48,55] = 0,1,2,3,4,5,6
+  return c.indexOf(item) == index;
+});
+//console.log(finalArray);
+
+//problem statement 22
+
+let numbers3 = [1, 2];
+let numbers4 = [100, 2, 1, 10];
+//let d = [...numbers3, ...numbers4].sort();
+
+//console.log(d) // d = [1,2,3,100,2,1,10]
+
+let difference = numbers4.filter((x) => !numbers3.includes(x));
+//console.log(difference);
+
+// problem statement 23
+
+function Remove(arr) {
+  //let newArray = [];
+  // console.log(arr)
+  arr.map((value) => {
+    if (value == 0 && NaN && false && "undefined" && null) {
+    }
+    return value;
+  });
+}
+//console.log(Remove([NaN, 0, 15, false, -22, "undefined", 47, null]));
+
+// let newNumber=[1,2,3,4]
+
+// const red=newNumber.reduce((a,b)=>{
+//   return a + b;
+// })
+// //console.log(red)
+
+// let newNumber = [2, 12, 3, 5];
+
+// function compare(a, b) {
+//   return a - b;
+// }
+
+// const sor = newNumber.sort((a, b) => a - b);
+// console.log(sor);
+
+function check(array, n) {
+  // for (i = 0; i < array.length; i++) {
+  //   if (array[i] == n) {
+  //     return true;
+  //   }
+  // }
+  // return false;
+  //  return array.some((value) => value === n);
+  return array.includes("vainik");
+}
+console.log(check([2, 12, 3, 5], 12));
+
 
