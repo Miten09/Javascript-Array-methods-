@@ -397,4 +397,13 @@ function check(array, n) {
 }
 console.log(check([2, 12, 3, 5], 12));
 
+// function name() {
+//   var n = 4;
+// }
+// console.log(n);
 
+//- Block scope -> variable defined inside curly braces like let & const it cannot print outside curly braces
+//               variable defined inside curly braces like var it can print outside curly braces
+
+// function scope -> variable defined inside functions like let , const & var it cannot print outside function
+ // global scope -> variable defined anywhwhere outside curly braces or function it will print outside function as well as inside function
