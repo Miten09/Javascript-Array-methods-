@@ -48,3 +48,65 @@
 
 // console.log(Date.now)
 
+// const myObject = {
+//   a: "miten",
+//   b: 1,
+//   c: false,
+// };
+
+// const num = [1, 2, 3, 4, 5];
+
+// let entries = Object.entries(myObject);
+
+// console.log(entries[0][0]);
+
+// Promises in javascript
+
+// function prom(complete) {
+//   return new Promise(function (resolve, reject) {
+//     if (complete) {
+//       resolve("I am successful");
+//     } else {
+//       reject("I am failed");
+//     }
+//   });
+// }
+
+// prom(true)
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((failed) => {
+//     console.log(failed);
+//   });
+
+// let p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("The first promise is resolved");
+//     resolve(10);
+//   }, 1000);
+// });
+
+// let p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("The second promise is resolved");
+//     resolve(20);
+//   }, 2000);
+// });
+
+// let p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("The third promise is resolved");
+//     resolve(30);
+//   }, 3000);
+// });
+
+// Promise.all([p1, p2, p3])
+//   .then((result) => {
+//     console.log(`Result: ${result}`);
+//   })
+//   .catch((err) => {
+//     console.log(`Error: ${err}`);
+//   });
+
+
